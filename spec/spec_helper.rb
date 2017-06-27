@@ -14,6 +14,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 ENV['RACK_ENV'] = 'test'
+env = ENV['RACK_ENV']
 require 'capybara'
 require 'rspec'
 require 'capybara/rspec'
@@ -21,7 +22,6 @@ require './app/models/link'
 require './app/app'
 require "database_cleaner"
 require "dm-transactions"
-# require "./support/database_cleaner.rb"
 
 Capybara.app = Bookmark_manager
 
